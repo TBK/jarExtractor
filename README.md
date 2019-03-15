@@ -30,7 +30,7 @@ sudo apk add openjdk8 unzip
 mkdir work && cd work
 curl -LJO https://www.benf.org/other/cfr/cfr-0.140.jar
 java jarExtractor jarToExtract.jar
-java cfr-0.140.jar
+find . -type f -name "*.class" -exec java -jar cfr-0.140.jar {} --outputdir {}.java \;
 ```
 
 ## Build
